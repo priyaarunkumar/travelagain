@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<img src="{% static 'pome.jpg' %}" width="50px" height="50px">
+{% for i in ob %}
+<br>
+{{i.name}}
+<br>
+<img src="{{i.image.url}}" height=100px width=100px>
+<br>
+{{i.desc}}
+<br>
+{% endfor %}
+</body>
+</html>
